@@ -23,7 +23,7 @@ const Navigation = props => {
   }
 
   return (
-    <div className={`bg-slate-900 fixed top-0 w-full h-full ${props.isNavigation ? 'block' : 'hidden'} overflow-y-scroll`}>
+    <div className={`bg-slate-900 fixed top-0 w-full md:hidden h-full ${props.isNavigation ? 'block' : 'hidden'} overflow-y-scroll`}>
       <div className='container text-sm text-gray-100 flex flex-col items-center justify-center mx-auto'>
         <div className='container flex items-center justify-between py-4'>
           <div className='px-4'>
@@ -53,7 +53,7 @@ const Navigation = props => {
             {subMenu.items.map((item, index) => (
               <div key={index}>
                 <div onClick={() => handleClickItem(item)} className='py-4 mx-4 border-t-2 border-gray-800 flex justify-between items-center'>{item.title} {itemTitle === item.title ? <FaAngleUp /> : <FaAngleDown />}</div>
-                {itemTitle === item.title && <div className='bg-white'>
+                {itemTitle === item.title && <div className='bg-white expand'>
                   {item.list.map((category, idx) => (
                     <div key={idx} className='mx-4 py-4 text-base text-gray-800 border-b-2 border-gray-200'>{category}</div>
                   ))}

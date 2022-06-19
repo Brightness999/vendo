@@ -20,6 +20,23 @@ a {
 }
 
 ::-webkit-scrollbar {
-	width: 0px;
-	height: 0px;
+  width: 0px;
+  height: 0px;
+}
+
+.expand {
+  animation: expanding 500ms ease-in-out forwards;
+  transform-origin: top center
+}
+
+@keyframes expanding {
+  0% {
+      transform: scaleY(0)
+  }
+  80% {
+      transform: scaleY(1.1)
+  }
+  100% {
+      transform: scaleY(1)
+  }
 }
